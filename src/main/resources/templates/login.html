@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0022)http://wygl.dl.gov.cn/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>物业管理系统</title>
+<script language="javascript" type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/logon.js"></script>
+<link rel="stylesheet" href="css/loginstyle.css" type="text/css">
+	
+<script language="javascript" type="text/javascript">
+$(document).ready(function(){
+	page_init('','null');
+	
+	$('#usercode').keyup(function(){
+		$("#logonMsg").html("");
+		$("#logonMsg").hide();
+		changePlaceholder();
+		});
+	$('#usercode').blur(function(){
+		changePlaceholder();
+		});
+	
+	$('#passwd').keyup(function(){
+		$("#logonMsg").html("");
+		$("#logonMsg").hide();
+		changePlaceholder();
+		});
+	$('#passwd').blur(function(){
+		changePlaceholder();
+		});	
+	
+	$('#validimage').keyup(function(){
+		$("#logonMsg").html("");
+		$("#logonMsg").hide();
+		changePlaceholder();
+		});
+	$('#validimage').blur(function(){
+		changePlaceholder();
+		});	
+});
+</script>
+</head>
+
+<body onkeydown="checkKey(event,&#39;true&#39;);" style="height: 100%;">
+	<form action="#" id="logonForm" name="logonForm" method="post">
+		<div class="mailLoginBox">
+		<div class="mailLogin" style="margin-top: 0px; position: static;">
+		<div class="headerBox">
+		        <div class="header clearfix">
+		        <div class="dlogo"><a class="logo" href="javascript:void(0);"><img src="images/logo.jpg" width="260" height="46" class="logo"></a></div>
+		        </div>
+		</div>
+		       
+		<div class="mainBox  bg1" style="background: url(&quot;images/1306261.jpg&quot;) no-repeat center rgb(192, 223, 226);">
+		<div class="main">
+		<div class="positionBox clearfix">
+		<div class="loginBox">
+		<ul class="tit clearfix"><li class="current">系统登录</li></ul>
+		
+		<div class="freeMailbox">
+		<div style="visibility:visble;" class="freeError">
+       		<span style="display:none;" id="logonMsg" class="loginError"></span>
+        </div>
+		<div class="usernameBox focus">
+		    <input tabindex="1" class="username" name="usercode" id="usercode" type="text">
+		    <label class="placeholder" id="phusercode" for="usercode">输入用户</label>
+		</div>
+		
+		<div class="passwordBox">                                
+		    <input tabindex="2" class="password" name="passwd" id="passwd" type="password">                                
+		    <label class="placeholder" id="phpasswd" for="passwd">输入密码</label>                            
+		</div>
+		
+		
+			<div class="validimageBox">                                
+			    <input tabindex="3" class="validimage" name="validimage" id="validimage" type="text">                            
+			    <label class="placeholder" id="phvalidimage" for="validimage">输入验证码</label>
+			    <img id="imgid" style="height:34px;" border="1" src="images/showValidImage.act" ondblclick="this.src=&#39;images/showValidImage.act?t=&#39;+new Date();" title="双击更新">                          
+			</div>
+		
+		
+		<div class="loginSetting clearfix">
+		    <input id="remember" name="remember" type="checkbox" value="1">
+			<input type="hidden" name="_remember">
+		    <label for="store1">记住用户</label>
+		</div>
+		
+		<div class="safeTip tip14">勾选后下次登录可无需再输入用户。</div>
+		
+		<div class="loginOrRegister clearfix">
+		    <a tabindex="3" class="loginBtn" href="javascript:void(0);" onclick="onLogin();return false;">登录</a>
+		    <p><b style="float: left;">关于系统</b><b><a href="javascript:void(0);">物业管理系统</a></b></p>
+		    <p><a href="http://wygl.dl.gov.cn/approve.doc">资质审批操作手册</a></p>
+		    <p><a href="http://wygl.dl.gov.cn/apply.doc">资质申报操作手册</a></p>
+		</div>
+		    
+		    <div class="loginFooter"></div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		
+		<div class="footerBox">
+		    <div class="footer clearfix">
+		    <p class="copy">大连华信&nbsp;版权所有&nbsp;&nbsp;&nbsp;&nbsp;Copyright&nbsp;©&nbsp;2013-2015&nbsp;DHC Corporation All Rights Reserved</p>
+		    </div>
+		</div>
+		
+		</div>
+		</div>
+	</form>
+
+
+</body></html>
