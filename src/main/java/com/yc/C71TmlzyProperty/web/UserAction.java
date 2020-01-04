@@ -8,6 +8,11 @@ public class UserAction {
 	
 	@GetMapping("login")
 	public void login(){}
-		
+	
+	@GetMapping("index")
+	public void index(){}
+	
+	@GetMapping("welcome")
+	public void welcome(){}
 	
 }
