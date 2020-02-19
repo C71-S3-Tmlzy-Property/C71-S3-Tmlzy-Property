@@ -1,0 +1,351 @@
+/* owners 样式 */
+
+.lou-main-content .lou-main-center .lou-main-search-wrapper .lou-main-search-input ul li a {
+/*    display: grid;
+    grid-template-columns: 150px 100px 2fr 1fr;*/
+}
+
+.lou-main-content .lou-main-center .lou-main-search-wrapper .lou-main-search-input ul li a span {
+    display: block;
+    max-width: 100% !important;
+}
+
+.lou-main-content .lou-main-center .lou-main-search-wrapper .lou-main-search-input ul li a span:nth-child(3) {
+    padding-left: 10px;
+}
+
+.owners-mask {
+    position: absolute;
+    padding: 32px 32px 88px;
+    /* top: 50%;
+    left: 50%; */
+    border-radius: 2px;
+    /* transform: translate3d(-50%, -50%, 0); */
+}
+
+.owners-mask .lou-mask-close-btn {
+    top: 20px;
+    right: 32px;
+}
+
+.owners-mask header {
+    margin-bottom: 19px;
+    text-align: center;
+}
+
+.owners-mask header dl dd {
+    margin-top: 19px;
+    font-size: 14px;
+}
+
+.owners-mask section p {
+    padding: 0 40px;
+    width: 284px;
+    color: #787878;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.owners-mask section .edit-item {
+    margin-bottom: 24px;
+    display: flex;
+}
+
+.owners-mask section .edit-item span {
+    flex: 1;
+    font-size: 14px;
+    line-height: 36px;
+    width: 80px;
+}
+
+.owners-mask section .edit-item input,
+.owners-mask section .edit-item textarea,
+.owners-mask section .edit-item div {
+    padding: 0 18px;
+    width: 280px;
+	height: 36px;
+	border-radius: 2px;
+    border: 1px solid #e6e6e6;
+    font-size: 14px;
+}
+
+.owners-mask section .edit-item div {
+    padding: 0;
+    position: relative;
+    background-repeat: no-repeat;
+    background-image: url(../images/down-arrow.png);
+    background-position: right 15px center;
+    cursor: pointer;
+    border: none;
+}
+
+.owners-mask section .edit-item div .select-model {
+    border: 1px solid #e6e6e6;
+}
+
+.owners-mask section .edit-item div span {
+    padding: 0 28px 0 18px;
+    display: block;
+    width: 100%;
+}
+
+.owners-mask section .edit-item div ul {
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: #fff;
+    border-top: none;
+    max-height: 144px;
+    overflow-y: auto;
+    border: 1px solid rgb(255, 175, 20);
+}
+
+.owners-mask section .edit-item div ul li {
+    padding: 0 18px;
+    line-height: 36px;
+}
+
+.owners-mask section .edit-item div ul li:hover {
+    background-color: #f7f7f7;
+}
+
+.owners-mask section .edit-item textarea {
+    padding: 11px 18px;
+    word-break: break-all;
+    resize: none;
+    height: 124px;
+    line-height: 24px;
+}
+
+.owners-mask section .edit-item.unit-item strong {
+    box-sizing: border-box;
+    padding-right: 19px;
+    /* width: 111px; */
+    line-height: 36px;
+}
+
+.owners-mask section .edit-item.unit-item input {
+    /* width: 169px; */
+    width: 244px;
+}
+
+.owners-mask section .edit-item.checkbox-item {
+    position: relative;
+    margin: 23px 0 15px;
+    height: 16px;
+    line-height: 16px;
+}
+
+.owners-mask section .edit-item.checkbox-item input {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    visibility: hidden;
+}
+
+.owners-mask section .edit-item.checkbox-item label {
+    padding-left: 23px;
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url(../images/unchecked-protocol.png);
+    cursor: pointer;
+}
+
+.owners-mask section .edit-item.checkbox-item input:checked + label {
+    background-image: url(../images/checked-protocol.png);
+}
+
+.owners-mask section .edit-item.verify-code-item {
+    border: 1px solid #e6e6e6;
+    margin-bottom: 0;
+}
+
+.owners-mask section .edit-item.verify-code-item input {
+    width: 190px;
+    border: none;
+}
+
+.owners-mask section .edit-item.verify-code-item span {
+    box-sizing: border-box;
+    flex: 1;
+    text-align: center;
+    border-left: 1px solid #e6e6e6;
+}
+
+.owners-mask footer {
+    position: absolute;
+    bottom: 34px;
+    left: 32px;
+    right: 32px;
+}
+
+.owners-mask footer .operate-btn {
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+	background-color: #ffaf14;
+    border-radius: 2px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* 添加水电表记录弹窗 */
+
+.add-record-mask {
+    display: none;
+    position: absolute;
+    padding: 65px 20px;
+    width: 514px;
+    height: 562px;
+    top: 50%;
+    left: 50%;
+    margin-left: -257px;
+    margin-top: -281px;
+    border-radius: 2px;
+}
+
+.add-record-mask .add-record-mask-inner {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.add-record-mask .lou-mask-close-btn {
+    top: 26px;
+    right: 21px;
+    z-index: 999;
+}
+
+.add-record-mask header {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    text-align: left;
+    font-weight: bold;
+    height: 65px;
+    line-height: 65px;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 16px;
+    color: #000;
+}
+
+.add-record-mask section {
+    padding: 24px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.add-record-mask section dl {
+    display: flex;
+}
+
+.add-record-mask section dl dt {
+    width: 85px;
+    height: 36px;
+    line-height: 36px;
+}
+
+.add-record-mask section dl dt strong {
+    color: #e24d4d;
+}
+
+.add-record-mask section dl dd {
+    flex: 1;
+}
+
+.add-record-mask section dl dd input {
+    padding: 0 15px;
+    width: 100%;
+    height: 36px;
+	background-color: #ffffff;
+	border-radius: 2px;
+	border: solid 1px #e6e6e6;
+}
+
+.add-record-mask section dl:first-child {
+    margin-bottom: 8px;
+}
+
+.add-record-mask section.record-item {
+    padding: 18px 0;
+}
+
+.add-record-mask section.record-item h4 {
+    margin-bottom: 16px;
+    text-align: left;
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+}
+
+.add-record-mask section.record-item .record-info-item {
+    margin-bottom: 12px;
+    display: flex;
+}
+
+.add-record-mask section.record-item .record-info-item:last-child {
+    margin-bottom: 0;
+}
+
+.add-record-mask section.record-item .record-info-item dl {
+    flex: 1;
+    margin-right: 16px;
+}
+
+.add-record-mask section.record-item dl:first-child {
+    margin-bottom: 0;
+}
+
+.add-record-mask section.record-item .record-info-item dl:last-child {
+    margin-right: 0;
+}
+
+.add-record-mask .add-a-record {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+    background-color: #fafafa;
+    height: 56px;
+}
+
+.add-record-mask .add-a-record span {
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    padding-left: 24px;
+    background-image: url(../images/show-list1.png);
+    background-repeat: no-repeat;
+    font-size: 14px;
+}
+
+.add-record-mask footer {
+    position: absolute;
+    bottom: 14px;
+    left: 20px;
+    right: 20px;
+}
+
+.add-record-mask footer a {
+    display: inline-block;
+    text-align: center;
+    line-height: 36px;
+    color: #513500;
+    font-size: 14px;
+    width: 100px;
+	height: 36px;
+	background-color: #ffaf14;
+	border-radius: 2px;
+}
+
+.disabled-bg{
+    background-color: rgb(235, 235, 228);
+}
+.red{
+    color: #e24d4d;
+}

@@ -1,0 +1,556 @@
+@charset "utf-8";
+
+body {
+  font-family: Arial, "Microsoft Yahei", "Helvetica Neue", Helvetica, sans-serif;
+  color: #000;
+  height: 100%;
+  width: 100%;
+  overflow-x: auto;
+}
+
+body,
+ul,
+ol,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+p,
+blockquote,
+th,
+td,
+pre,
+xmp,
+div,
+span,
+header,
+form {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: MicrosoftYaHei;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+  font-weight: normal;
+}
+
+table.lou-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: left;
+}
+
+ul,
+ol,
+menu {
+  list-style: none;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+img,
+object,
+input,
+textarea,
+button,
+select {
+  vertical-align: middle;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  outline: none;
+  border: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a {
+  color: #787878;
+  text-decoration: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #b9b9b9;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #b9b9b9;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #b9b9b9;
+}
+
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+}
+
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset006pxrgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset006pxrgba(0, 0, 0, 0.5);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+}
+
+/* 公共背景、颜色 */
+
+.lou-orange-bg {
+  background-color: #ffaf14;
+}
+
+.lou-white-bg {
+  background-color: #fff;
+  /* border: 1px solid #e6e6e6; */
+  box-sizing: border-box;
+}
+
+.lou-gray-bg {
+  background-color: #f0f0f0;
+}
+
+.lou-alert-color {
+  color: #e24d4d;
+}
+
+/* 公共遮罩层设置 */
+.lou-index-inner-mask {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.lou-index-inner-mask .lou-mask-close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/mask-close.png);
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.lou-index-inner-mask h3 {
+  margin: 0 30px;
+  padding-bottom: 15px;
+  text-align: center;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+/* 日期插件样式 */
+.layui-laydate .layui-this {
+  background-color: #ffaf14 !important;
+}
+
+/* 表格样式 */
+
+.table-outer-wrapper {
+  padding: 0 20px;
+  background-color: #fafafa;
+  overflow: auto;
+}
+
+table.lou-table {
+  width: 100%;
+}
+
+table.lou-table th,
+table.lou-table td {
+  min-width: 45px;
+  text-align: center;
+  font-size: 14px;
+}
+
+table.lou-table td::after {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -7px;
+  height: 14px;
+  background-color: #e6e6e6;
+  width: 1px;
+  content: '';
+}
+
+table.lou-table tr td:last-child::after {
+  height: 0;
+}
+
+table.lou-table th {
+  height: 50px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+table.lou-table th span {
+  color: #e24d4d;
+}
+
+table.lou-table td div,
+table.lou-table td p {
+  line-height: 22px;
+}
+
+table.lou-table td {
+  position: relative;
+  min-height: 45px;
+  height: 45px;
+  padding: 10px;
+  word-break: break-all;
+  line-height: 22px;
+  border-bottom: 1px solid #e6e6e6;
+  white-space: nowrap;
+}
+
+table.lou-table tbody tr:hover {
+  background-color: #f3f3f3;
+}
+
+table.lou-table td a {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 1px 9px;
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+table.lou-table td a:first-child {
+  background-color: #ffaf14;
+  color: #000;
+}
+
+table.lou-table td a:last-child {
+  margin-left: 8px;
+  background-color: #e24d4d;
+  color: #fff;
+}
+
+table.lou-table td a.order-detail {
+  min-width: 66px;
+  background-color: #ffaf14 !important;
+  color: #000;
+}
+
+table.lou-table td a.bill-obsolete {
+  min-width: 66px;
+  background-color: #e24d4d !important;
+  color: #fff !important;
+}
+
+table.lou-table td a.print-invoice {
+  min-width: 66px;
+  background-color: #3892e6 !important;
+  color: #fff !important;
+}
+
+table.lou-table td span.line-through {
+  text-decoration: line-through;
+}
+
+table.lou-table td span.blue-txt {
+  color: #3892e6;
+}
+
+table.lou-table td span.red-txt {
+  color: #e24d4d;
+}
+
+table.lou-table td a.yellow-btn {
+  background-color: #ffaf14 !important;
+  color: #000 !important;
+}
+
+/* 下拉框 */
+
+.lou-edit-row .select-model {
+  position: relative;
+}
+
+.lou-edit-row .select-model span {
+  padding: 0 26px 0 14px;
+  display: block;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 36px;
+  height: 36px;
+  color: #000;
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid #e6e6e6;
+  background-repeat: no-repeat;
+  background-image: url(../images/down-arrow.png);
+  background-position: right 15px center;
+  cursor: pointer;
+}
+
+.lou-edit-row .select-model ul {
+  display: none;
+  position: absolute;
+  top: 36px;
+  left: 0px;
+  right: 0px;
+  z-index: 999;
+  background-color: #fff;
+  border-top: none;
+  max-height: 144px;
+  overflow-y: auto;
+  border: 1px solid rgb(255, 175, 20);
+  border-top: none;
+}
+
+.lou-edit-row .select-model ul li {
+  padding: 0 18px;
+  line-height: 36px;
+  cursor: pointer;
+}
+
+.lou-edit-row .select-model ul li:hover {
+  background-color: #f7f7f7;
+}
+
+/* 统一按钮 */
+
+.lou-btn {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100px;
+  height: 36px;
+  line-height: 36px;
+  background-color: #ffaf14;
+  border-radius: 2px;
+  color: #000;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+/* 分页 */
+
+footer.footer-align-left {
+  padding-left: 0;
+  text-align: left;
+}
+
+footer.footer-align-left .import-btn {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  text-align: center;
+  width: 110px;
+  height: 26px;
+  line-height: 26px;
+  background-color: #ffaf14;
+  font-size: 16px;
+  letter-spacing: 2px;
+  background-repeat: no-repeat;
+  background-position: 27px center;
+  background-image: url(../images/import-ico.png);
+  color: #000;
+}
+
+footer.footer-align-left .simple-pagination {
+  display: inline-block;
+  font-size: 0;
+}
+
+footer.footer-align-left .simple-pagination ul li {
+  display: inline-block;
+}
+
+footer.footer-align-left .simple-pagination ul li a,
+footer.footer-align-left .simple-pagination ul li span,
+footer.footer-align-left a.first-page-btn,
+footer.footer-align-left a.last-page-btn {
+  box-sizing: border-box;
+  margin-left: 8px;
+  display: inline-block;
+  padding: 0;
+  min-width: 26px;
+  line-height: 26px;
+  height: 26px;
+  background-color: #fff;
+  border-radius: 2px;
+  border: 1px solid #e6e6e6;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer.footer-align-left ul li span.current {
+  background-color: #ffaf14;
+  color: #000;
+  font-weight: normal;
+  border: none;
+}
+
+footer.footer-align-left ul li span.current.next,
+footer.footer-align-left ul li span.current.prev {
+  background-color: #fff;
+  color: #787878;
+  border: 1px solid #e6e6e6;
+}
+
+footer.footer-align-left strong {
+  margin-left: 18px;
+  font-weight: bold;
+}
+
+footer.footer-align-left .import-btn {
+  padding-left: 39px;
+  box-sizing: border-box;
+  width: 110px;
+  height: 26px;
+  line-height: 26px;
+  text-align: left;
+  background-color: #ffaf14;
+  background-repeat: no-repeat;
+  background-image: url(../images/import-ico.png);
+  background-position: 27px center;
+}
+
+/* 面包屑 */
+
+.lou-bread-crumbs {
+  position: relative;
+  height: 45px;
+  line-height: 45px;
+}
+
+.lou-bread-crumbs span {
+  font-size: 16px;
+  color: #787878;
+}
+
+.lou-bread-crumbs span.active {
+  color: #000;
+}
+
+/* 日期输入样式 */
+input.dateinput {
+  padding-left: 36px !important;
+  background-image: url(../images/lou-datepicker.png);
+  background-repeat: no-repeat;
+  background-position: 14px center;
+}
+
+
+/* 公共mask样式 */
+
+.common-mask {
+  position: relative;
+}
+
+.common-mask header {
+  height: 64px;
+  line-height: 64px;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 16px;
+  color: #433f56;
+}
+
+.common-mask section dl {
+  display: flex;
+  align-items: center;
+}
+
+.common-mask section dl dt {
+  width: 74px;
+}
+
+.common-mask section dl dd {
+  flex: 1;
+}
+
+.common-mask section dl dd input {
+  padding: 0 14px;
+  border: solid 1px #e6e6e6;
+  height: 36px;
+  border-radius: 2px;
+  width: 100%;
+} 
+
+.common-mask section dl dd input.datetime {
+  padding-left: 40px;
+  background-repeat: no-repeat;
+  background-image: url(../images/lou-datepicker.png);
+  background-position: 14px center;
+}
+
+.common-mask footer {
+  display: flex;
+}
+
+.common-mask footer a {
+  flex: 1;
+  height: 36px;
+  background-color: #ffaf14;
+  border-radius: 2px;
+  line-height: 36px;
+  color: #000;
+  letter-spacing: 2px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.common-mask footer a.delete-item {
+  margin-right: 16px;
+  background-color: #4c4c4c;
+  color: #ffaf14;
+}
+.ash-placing{
+  background-color: rgb(235, 235, 228);
+}

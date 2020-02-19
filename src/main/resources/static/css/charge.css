@@ -1,0 +1,510 @@
+.charges-define {
+    position: relative;
+    padding: 150px 30px 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.charges-define header {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    right: 30px;
+}
+
+.charges-define header .charges-btn {
+    position: absolute;
+    top: 14px;
+    right: 0;
+    width: 130px;
+    font-size: 14px;
+	letter-spacing: 2px;
+	color: #513500;
+}
+
+.charges-define header .lou-bread-crumbs {
+    height: 65px;
+    line-height: 65px;
+}
+
+.charges-define header .charge-search-wrapper {
+    position: relative;
+    padding: 24px 0;
+    border-top: 1px solid #e6e6e6;
+    box-shadow: 0 12px 15px -14px rgba(0, 0, 0, .3);
+}
+
+.charges-define header .charge-search-wrapper .charge-search {
+    position: relative;
+    width: 397px;
+}
+
+.charges-define header .charge-search-wrapper .charge-search i {
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    right: 10px;
+    cursor: pointer;
+}
+
+.charges-define header .charge-search-wrapper .charge-search input {
+    padding: 0 30px 0 14px;
+    height: 36px;
+    border-radius: 2px;
+    border: solid 1px #ffaf14;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-image: url(../images/search.png);
+}
+
+.charges-define header .charge-search-wrapper .charge-search ul {
+    display: none;
+    position: absolute;
+    padding: 10px 0;
+    top: 36px;
+    left: 0;
+    width: 100%;
+    width: 397px;
+	height: 150px;
+	background-color: #ffffff;
+    border: solid 1px #ffaf14;
+    border-top: none;
+    overflow-y: auto;
+}
+
+.charges-define header .charge-search-wrapper .charge-search ul li {
+    padding: 0 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+    font-size: 14px;
+}
+
+.charges-define header .charge-search-wrapper .charge-search ul li:hover {
+    background-color: #f7f7f7;
+}
+
+.charges-define header .charge-search-wrapper .price-changes-btn {
+    position: absolute;
+    box-sizing: border-box;
+    padding-left: 38px;
+    top: 24px;
+    right: 0;
+    text-align: left;
+    width: 156px;
+	height: 36px;
+	background-color: #f6f6f6;
+    border-radius: 18px;
+    font-size: 14px;
+    background-image: url(../images/price-changes-btn.png);
+    background-position: left 9px center;
+    background-repeat: no-repeat;
+}
+
+.charges-define .charges-content-wrapper {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.charges-define .charges-content-wrapper .charges-content-item {
+    padding: 30px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.charges-define .charges-content-wrapper .charges-content-item h2 {
+    margin-bottom: 16px;
+	font-family: MicrosoftYaHei-Bold;
+	font-size: 18px;
+	font-weight: bold;
+	color: #000;
+}
+
+.charges-define .charges-content-wrapper .charges-content-item .charges-item-btn {
+    display: inline-block;
+    box-sizing: border-box;
+    padding-left: 32px;
+    width: 138px;
+    height: 24px;
+    line-height: 24px;
+	background-color: #ffaf14;
+    border-radius: 12px;
+    background-image: url(../images/charge-add-ico.png);
+    background-position: 14px center;
+    background-repeat: no-repeat;
+    color: #513500;
+}
+
+/* 弹窗 */
+.charges-mask {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.charges-mask .charges-btn {
+    position: absolute;
+    right: 24px;
+    top: 76px;
+    width: 146px;
+    height: 52px;
+    background-repeat: no-repeat;
+    background-image: url(../images/charges-btn.png);
+}
+
+.charges-mask p {
+    position: absolute;
+    right: 24px;
+    top: 140px;
+    padding: 7px 0 0 9px;
+    width: 350px;
+    height: 43px;
+    line-height: 36px;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    letter-spacing: 3px;
+    color: #000;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-image: url(../images/charges-tit.png);
+}
+
+.table-outer-wrapper {
+    margin-top: 14px;
+    margin-bottom: 20px;
+    display: flex;
+    overflow: hidden;
+}
+
+.table-outer-wrapper .charge-table {
+    flex: 1;
+}
+
+.table-outer-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+.table-outer-wrapper .charge-item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+}
+
+.table-outer-wrapper .charge-item-info a.operate-charge-item {
+    padding-left: 15px;
+    color: #787878;
+    font-size: 12px;
+    background-repeat: no-repeat;
+    background-image: url(../images/edit-ico.png);
+    cursor: pointer;
+    text-align: center;
+}
+
+.table-outer-wrapper .charge-item-info p {
+    margin-bottom: 6px;
+    word-break: break-all;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.table-outer-wrapper .charge-item-info a.lou-btn {
+    margin-top: 14px;
+    width: 90px;
+    height: 24px;
+    line-height: 24px;
+	background-color: #4c4c4c;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #ffaf14;
+    letter-spacing: 2px;
+}
+
+.lou-index-inner-mask {
+    align-items: center;
+    justify-content: center;
+}
+
+.charges-series-mask {
+    display: none;
+    padding: 0 30px 25px;
+    width: 388px;
+}
+
+.charges-series-mask .lou-mask-close-btn {
+    top: 23px;
+    right: 30px;
+}
+
+.charges-series-mask section.charge-operate-item {
+    margin: 40px 0;
+}
+
+.charges-series-mask section.charge-define-section dl {
+    margin-top: 20px;
+}
+
+.reference-mask {
+    display: none;
+    padding: 65px 0 37px;
+    position: relative;
+    width: 730px;
+	height: 768px;
+	background-color: #ffffff;
+    border: solid 1px #e6e6e6;
+    overflow-y: auto;
+}
+
+.reference-mask .lou-mask-close-btn {
+    top: 26px;
+    z-index: 999;
+}
+
+.reference-mask header {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    font-weight: bold;
+    right: 30px;
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.reference-mask header a {
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 170px;
+    height: 36px;
+    line-height: 36px;
+    color: #000;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+	background-color: #ffaf14;
+	border-radius: 2px;
+}
+
+.reference-mask section {
+    padding: 16px 30px;
+    font-size: 14px;
+}
+
+.reference-mask section table {
+    width: 100%;
+}
+
+.reference-mask section .charge-check-one,
+.reference-mask section table th,
+.reference-mask section table td {
+    position: relative;
+}
+
+.reference-mask section .charge-check-one {
+    margin-bottom: 10px;
+}
+
+.reference-mask section .charge-check-one input[type="checkbox"],
+.reference-mask section table th input[type="checkbox"],
+.reference-mask section table td input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+}
+
+.reference-mask section .charge-check-one label {
+    padding-left: 30px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-image: url(../images/big-uncheck.png);
+    cursor: pointer;
+}
+
+.reference-mask section .charge-check-one input:checked + label {
+    background-image: url(../images/big-checked.png);
+}
+
+.reference-mask section table th label,
+.reference-mask section table td label {
+    padding-left: 26px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-image: url(../images/checkbox-unchecked.png);
+    cursor: pointer;
+}
+
+.reference-mask section table th input:checked + label,
+.reference-mask section table td input:checked + label {
+    background-image: url(../images/checkbox-checked.png);
+}
+
+.reference-mask section table td label {
+    margin-left: 18px;
+}
+
+.reference-mask section table th,
+.reference-mask section table td {
+    text-align: center;
+}
+
+.reference-mask section table td input {
+    padding: 0 5px;
+    width: 86px;
+	height: 20px;
+	background-color: #ffffff;
+    border: solid 1px #e4e4e4;
+    text-align: center;
+}
+
+.reference-mask section table th:first-child,
+.reference-mask section table td:first-child {
+    text-align: left;
+}
+
+.reference-mask section table th,
+.reference-mask section table td {
+    height: 32px;
+}
+
+.reference-mask section table th {
+    visibility: hidden;
+}
+
+.reference-mask section table th:first-child {
+    visibility: visible;
+}
+
+.charges-common {
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.relate-room-wrapper {
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.relate-room-wrapper .lou-edit-row .select-model ul {
+    max-height: 600px;
+}
+
+.relate-room-wrapper .relate-filter-wrapper {
+    display: flex;
+    padding-top: 24px;
+    border-top: 1px solid #e6e6e6;
+}
+
+.relate-room-wrapper .relate-filter-wrapper dl {
+    flex: 1;
+    display: flex;
+}
+
+.relate-room-wrapper .relate-filter-wrapper dl:first-child {
+    margin-right: 18px;
+}
+
+.relate-room-wrapper .relate-filter-wrapper dl dt {
+    margin-right: 18px;
+    line-height: 36px;
+}
+
+.relate-room-wrapper .relate-filter-wrapper dl dd {
+    flex: 1;
+}
+
+.relate-room-wrapper .relate-related-rooms {
+    margin: 24px 0;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+	background-color: #f8f7fa;
+}
+
+.relate-room-wrapper .relate-related-rooms dl {
+    flex: 1;
+}
+
+.relate-room-wrapper .relate-related-rooms dl dt {
+    display: inline-block;
+}
+
+.relate-room-wrapper .relate-related-rooms dl dd {
+    display: inline-block;
+    color: #787878;
+}
+
+.relate-room-wrapper .relate-btns-wrapper {
+    font-size: 0;
+}
+
+.relate-room-wrapper .relate-btns-wrapper a {
+    color: #513500;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.relate-room-wrapper .relate-btns-wrapper a:first-child {
+    margin-right: 10px;
+}
+
+.relate-room-tree h2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.relate-room-tree h2 i.relate-search {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 14px;
+    background-repeat: no-repeat;
+    background-image: url(../images/light-search.png);
+    cursor: pointer;
+}
+
+.relate-room-tree h2 input {
+    padding: 0 35px 0 14px;
+    width: 100%;
+	height: 36px;
+	background-color: #ffffff;
+	border: solid 1px #e6e6e6;
+}
+
+.relate-room-tree p {
+    position: relative;
+    margin-top: 28px;
+}
+
+.relate-room-tree p a {
+    position: absolute;
+    right: 0;
+    text-decoration: underline;
+    color: #433f56;
+    font-size: 14px;
+}
+.disabled-bg{
+    background-color: rgb(235, 235, 228);
+}
+table.lou-table td a:last-child{
+    margin-left: 0;
+}
+.must_red{
+    color: #ff0000;
+}
+.effect-date{
+    width: 100px !important;
+}
