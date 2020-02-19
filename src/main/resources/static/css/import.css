@@ -1,0 +1,274 @@
+.lou-import-wrapper {
+    padding: 0 20px 12px;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.lou-import-wrapper .lou-bread-nav {
+    height: 75px;
+    line-height: 75px;
+    border-bottom: 1px solid #e6e6e6;
+    color: #787878;
+}
+
+.lou-import-wrapper .lou-bread-nav a {
+    font-size: 16px;
+}
+
+.lou-import-wrapper .lou-bread-nav a.active {
+    color: #000;
+    font-weight: bold;
+}
+
+.lou-import-wrapper .lou-apply-intro {
+    margin-bottom: 16px;
+}
+
+.lou-import-wrapper .lou-apply-intro h2 {
+    padding-left: 26px;
+    margin: 24px 0;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-image: url(../images/abouton.png);
+}
+
+.lou-import-wrapper .lou-apply-intro p {
+    line-height: 26px;
+    color: #787878;
+}
+
+.lou-import-wrapper .lou-import-template, .lou-import-wrapper .lou-import-history {
+    padding: 0 20px;
+    background-color: #fafafa;
+}
+
+.lou-import-wrapper .lou-import-history table a.fail-data {
+    background-color: #3892e6;
+    color: #fff;
+}
+
+.lou-import-wrapper .lou-import-history table a.cancel-data {
+    background-color: #e24d4d;
+    color: #fff;
+    padding: 1px 15px;
+}
+
+.lou-import-wrapper .lou-import-history table a.canceled-data {
+    background-color: #d6d6d6;
+    color: #666;
+}
+
+.lou-import-wrapper .lou-import-template {
+    overflow-x: auto;
+}
+
+.lou-import-wrapper .lou-history-control {
+    position: relative;
+}
+
+.lou-import-wrapper .history-button {
+    font-size: 0;
+    position: absolute;
+    right: 0;
+    top: -10px;
+}
+
+.lou-import-wrapper .history-button a {
+    display: inline-block;
+    background-color: #ffaf14;
+    font-size: 16px;
+    color: #000;
+    height: 36px;
+    line-height: 36px;
+    width: 130px;
+    text-align: center;
+}
+
+.lou-import-wrapper .history-button a:first-child {
+    margin-right: 12px;
+}
+
+.lou-import-wrapper .lou-history-control h3 {
+    margin: 34px 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.lou-import-wrapper .lou-import-history {
+    margin-bottom: 12px;
+    /* min-height: 496px; */
+}
+
+.lou-import-wrapper .lou-pagination {
+    font-size: 0;
+}
+
+.lou-import-wrapper .lou-pagination a {
+    margin-right: 6px;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 2px;
+    border: 1px solid #e6e6e6;
+    color: #787878;
+    font-size: 14px;
+}
+
+.lou-import-wrapper .lou-pagination a.pagination-control {
+    color: #000;
+}
+
+.lou-import-wrapper .lou-pagination a.active {
+    background-color: #ffaf14;
+    color: #000;
+}
+
+.lou-import-wrapper .lou-pagination span {
+    margin-left: 12px;
+    color: #000;
+    font-weight: bold;
+}
+
+.lou-import-mask {
+    position: absolute;
+    padding: 23px 30px 26px;
+    top: 50%;
+    left: 50%;
+    margin-left: -193px;
+    margin-top: -239px;
+    /* transform: translate3d(-50%, -50%, 0); */
+    width: 387px;
+    height: 478px;
+}
+
+.lou-index-inner-mask .lou-mask-close-btn {
+    top: 23px;
+}
+
+.lou-import-mask h3 {
+    padding-bottom: 24px;
+    margin: 0;
+    text-align: left;
+    font-size: 16px;
+}
+
+.lou-import-mask .import-controler {
+    margin-top: 30px;
+    padding: 0 60px;
+    background-color: #f0f0f0;
+    border-radius: 6px;
+    min-height: 156px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lou-import-mask .import-controler .webuploader-pick {
+    padding: 0;
+    background-color: transparent;
+}
+
+.lou-import-mask .import-progress {
+    display: none;
+    padding-top: 50px;
+}
+
+.lou-import-mask .import-progress .progress-wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+}
+
+.lou-import-mask .import-progress .progress-wrapper span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 24px;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.lou-import-mask dl dt {
+    margin: 15px 0 8px;
+    color: #000;
+    text-align: center;
+}
+
+.lou-import-mask .import-progress dl dt {
+    margin-top: 25px;
+    color: #000;
+}
+
+.lou-import-mask dl dd {
+    color: #787878;
+    font-size: 12px;
+    text-align: center;
+}
+
+.lou-import-mask .import-bottom {
+    position: absolute;
+    bottom: 26px;
+    left: 30px;
+    right: 30px;
+}
+
+.lou-import-mask .import-bottom button {
+    display: block;
+    width: 100%;
+    border-radius: 2px;
+    height: 36px;
+    background-color: #ffaf14;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+}
+
+.lou-import-mask .import-bottom button.inactive {
+    background-color: #f0f0f0;
+    color: #999999;
+}
+
+.lou-import-mask .import-bottom p {
+    margin-bottom: 8px;
+    color: #787878;
+    font-size: 12px;
+    text-align: center;
+}
+
+.lou-import-mask .import-bottom a {
+    display: block;
+    text-align: center;
+    margin-bottom: 13px;
+    color: #ff7e49;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.check-box {
+    margin: 20px 0;
+}
+
+.check-box input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+}
+
+.check-box label {
+    padding-left: 26px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-image: url(../images/checkbox-unchecked.png);
+    cursor: pointer;
+}
+
+.check-box input:checked+label {
+    background-image: url(../images/checkbox-checked.png);
+}

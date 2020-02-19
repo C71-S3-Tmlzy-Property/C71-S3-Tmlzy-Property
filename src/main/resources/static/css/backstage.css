@@ -1,0 +1,152 @@
+.lou-backstage{
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+.lou-backstage-top{
+  display: flex;
+  padding: 20px;
+  height: 100px;
+}
+.lou-backstage-top .font{
+  flex: 1;
+  margin-top: 8px;
+}
+.lou-backstage-top .headline{
+  font-size: 20px;
+  color: #433f56;
+  font-weight: bold;
+}
+.lou-backstage-top .subheading{
+  color: #433f56;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.lou-backstage-top .tel{
+  color: #8c8b93;
+  font-size: 14px;
+  line-height: 60px;
+}
+.lou-backstage-center{
+  padding: 20px;
+}
+.lou-backstage-center .lou-property{
+  position: relative;
+}
+.lou-backstage-center .lou-property::before{
+  content: '';
+  position: absolute;
+  width: 2px;
+	height: 14px;
+	background-color: #a2a4b3;
+}
+.lou-backstage-center p{
+  margin-bottom: 28px;
+  padding-left: 8px;
+}
+
+.lou-backstage-center .tube{
+  color: #ffaf14;
+}
+.lou-backstage-bottom{
+  display: flex;
+}
+.lou-backstage-bottom .flex1 .public-small{
+  font-size: 12px;
+  color: #8c8b93;
+  margin-top: 8px;
+}
+.lou-backstage-bottom .flex1 .public-green{
+  color: #35bb61;
+  margin-top: 13px;
+}
+.lou-backstage-bottom .flex1 .public-yellow{
+  color: #ffaf14;
+  margin-top: 13px;
+}
+.lou-backstage-bottom .flex1{
+  flex: 1;
+  margin-left: 8px;
+  text-align: center;
+  padding: 22px;
+}
+.lou-backstage-bottom .flex2{
+  flex: 2;
+  padding: 22px;
+}
+.lou-backstage-bottom .louli-layout{
+  display: flex;
+}
+.lou-backstage-bottom .louli-layout div{
+  flex: 1;
+}
+.lou-backstage-bottom .louli-layout .headline{
+  font-size: 20px;
+  color: #ffaf14;
+  font-weight: bold;
+}
+.lou-backstage-bottom .louli-layout .subheading{
+  font-size: 12px;
+  color: #787878;
+  margin-top: 20px;
+}
+.lou-backstage-bottom .louli-layout .img{
+  text-align: right;
+  margin-top: 6px;
+}
+
+.lou-system-function{
+  display: flex;
+  margin-bottom: 68px;
+}
+.lou-system-function .flex-1{
+  flex: 1;
+  margin-right: 10px;
+}
+.lou-system-function .flex-2{
+  flex: 2;
+  margin-right: 10px;
+}
+.lou-system-function .flex-title{
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  background-color: #f8f7fa;
+  border-bottom: 1px solid #e5e1ec;
+  color: #433f56;
+  margin-bottom: 25px;
+}
+.lou-system-function .flex-content{
+  display: flex;
+
+  color: #787878;
+  padding-bottom: 34px;
+}
+.lou-system-function .flex-content:last-child{
+  padding-bottom: 0;
+}
+.flex-contentd{
+  height: 60px;
+  border-right: 1px solid #e5e1ec;
+}
+
+.lou-system-function .flex-content a:hover{
+  color: #ffaf14;
+}
+.lou-system-function .flex-content-1{
+  flex: 1;
+  padding-left: 20px;
+}
+.lou-system-function .flex-content-2{
+  flex: 2;
+  padding-left: 20px;
+}
+.lou-system-function .last{
+  border-right: none !important;
+}
+.lou-backstage-copyright{
+  color: #787878;
+  font-size: 14px;
+  padding: 40px 0;
+  text-align: center;
+}
