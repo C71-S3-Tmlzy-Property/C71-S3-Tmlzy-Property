@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yc.springboot.C71S3TmlzyProperty.dao.HousingInfoMapper">
+  <resultMap id="BaseResultMap" type="com.yc.springboot.C71S3TmlzyProperty.bean.HousingInfo">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="hous_id" jdbcType="INTEGER" property="housId" />
+    <result column="owne_id" jdbcType="INTEGER" property="owneId" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="move_into_time" jdbcType="TIMESTAMP" property="moveIntoTime" />
+    <result column="move_out_time" jdbcType="TIMESTAMP" property="moveOutTime" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, hous_id, owne_id, status, move_into_time, move_out_time
+  </sql>
+  <select id="selectByExample" parameterType="com.yc.springboot.C71S3TmlzyProperty.bean.HousingInfoExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from housing_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from housing_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from housing_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.yc.springboot.C71S3TmlzyProperty.bean.HousingInfoExample">
+    delete from housing_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.yc.springboot.C71S3TmlzyProperty.bean.HousingInfo">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into housing_info (hous_id, owne_id, status, 
+      move_into_time, move_out_time)
+    values (#{housId,jdbcType=INTEGER}, #{owneId,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, 
+      #{moveIntoTime,jdbcType=TIMESTAMP}, #{moveOutTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.yc.springboot.C71S3TmlzyProperty.bean.HousingInfo">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into housing_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="housId != null">
+        hous_id,
+      </if>
+      <if test="owneId != null">
+        owne_id,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="moveIntoTime != null">
+        move_into_time,
+      </if>
+      <if test="moveOutTime != null">
+        move_out_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="housId != null">
+        #{housId,jdbcType=INTEGER},
+      </if>
+      <if test="owneId != null">
+        #{owneId,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="moveIntoTime != null">
+        #{moveIntoTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="moveOutTime != null">
+        #{moveOutTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.yc.springboot.C71S3TmlzyProperty.bean.HousingInfoExample" resultType="java.lang.Long">
+    select count(*) from housing_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update housing_info
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.housId != null">
+        hous_id = #{record.housId,jdbcType=INTEGER},
+      </if>
+      <if test="record.owneId != null">
+        owne_id = #{record.owneId,jdbcType=INTEGER},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.moveIntoTime != null">
+        move_into_time = #{record.moveIntoTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.moveOutTime != null">
+        move_out_time = #{record.moveOutTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update housing_info
+    set id = #{record.id,jdbcType=INTEGER},
+      hous_id = #{record.housId,jdbcType=INTEGER},
+      owne_id = #{record.owneId,jdbcType=INTEGER},
+      status = #{record.status,jdbcType=INTEGER},
+      move_into_time = #{record.moveIntoTime,jdbcType=TIMESTAMP},
+      move_out_time = #{record.moveOutTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.yc.springboot.C71S3TmlzyProperty.bean.HousingInfo">
+    update housing_info
+    <set>
+      <if test="housId != null">
+        hous_id = #{housId,jdbcType=INTEGER},
+      </if>
+      <if test="owneId != null">
+        owne_id = #{owneId,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="moveIntoTime != null">
+        move_into_time = #{moveIntoTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="moveOutTime != null">
+        move_out_time = #{moveOutTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.yc.springboot.C71S3TmlzyProperty.bean.HousingInfo">
+    update housing_info
+    set hous_id = #{housId,jdbcType=INTEGER},
+      owne_id = #{owneId,jdbcType=INTEGER},
+      status = #{status,jdbcType=INTEGER},
+      move_into_time = #{moveIntoTime,jdbcType=TIMESTAMP},
+      move_out_time = #{moveOutTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

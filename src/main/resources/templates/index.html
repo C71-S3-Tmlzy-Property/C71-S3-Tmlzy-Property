@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://n.loulilouwai.net/lllw/index/index.html -->
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head th:include="common::head">
+	<meta charset="UTF-8">
+</head>
+
+<body>
+    <div th:replace="common::common_header"></div>
+        
+    <div th:replace="common::common_nav"></div>
+    
+	
+    
+<link rel="stylesheet" href="css/backstage.css" type="text/css">
+    <div class="lou-backstage">
+        <div class="lou-main-content">
+          <div class="lou-main-center" style="margin-left: 2px;">
+            <div class="charge-price-records lou-white-bg">
+                <div class="lou-backstage-top">
+                    <div class="font">
+                        <p class="headline">沙雕小区</p>
+                        <p class="subheading">楼里楼外物业管理系统</p>
+                    </div>
+                    <div class="tel"> 客服电话：17643050229</div>
+                </div>
+            </div>
+            <div style="height:8px;"></div>
+            <div class="charge-price-records lou-white-bg">
+                <div class="lou-backstage-center">
+                    <div class="lou-property">
+                        <p>楼里楼外物业管理系统功能</p>
+                    </div>
+                    <div class="lou-system-function">
+                        <div class="flex-2">
+                            <div class="flex-title">初始化设置</div>
+                            <div class="flex-contentd">
+                                <div class="flex-content">
+                                    <div class="flex-content-1">
+                                        <a permissionclass="view_household" href="https://n.loulilouwai.net/lllw/house_owner/index.html" class="permissionclass">管理住户</a>
+                                    </div>
+                                    <div class="flex-content-1">
+                                        <a permissionclass="view_custom" href="https://n.loulilouwai.net/lllw/fee_custom/index.html" class="permissionclass">收费项定义</a>
+                                    </div>
+                                    <div class="flex-content-2">
+                                        <a permissionclass="maintain_household" href="https://n.loulilouwai.net/lllw/import_fee/index.html" class="permissionclass">导入历史缴费数据</a>
+                                    </div>
+                                </div>
+                                <div class="flex-content">
+                                    <div class="flex-content-1">
+                                        <a permissionclass="maintain_household" href="https://n.loulilouwai.net/lllw/import_owner/index.html" class="permissionclass">导入住户</a>/<a permissionclass="maintain_household" href="https://n.loulilouwai.net/lllw/import_owner/edit.html" class="permissionclass">导入修改住户</a>
+                                    </div>
+                                    <div class="flex-content-1">
+                                        <a permissionclass="view_custom" href="https://n.loulilouwai.net/lllw/fee_custom/index.html" class="permissionclass">收费项选用</a>
+                                    </div>
+                                    <div class="flex-content-2">
+                                        <!-- <a permissionclass="view_household" href="/lllw/import_meter/index.html" class="permissionclass">抄水电表记录</a> -->
+                                        <a permissionclass="view_household" href="https://n.loulilouwai.net/lllw/import_meter/index.html" class="permissionclass">导入抄表记录</a>/<a permissionclass="view_household" href="https://n.loulilouwai.net/lllw/house_owner/index.html" class="permissionclass">抄表记录</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex-title">缴费</div>
+                            <div class="flex-contentd">
+                                <div class="flex-content">
+                                    <div class="flex-content-1">
+                                        <a permissionclass="order_count" href="https://n.loulilouwai.net/lllw/order_count/index.html" class="permissionclass">缴费</a>
+                                    </div>
+                                </div>
+                                <div class="flex-content">
+                                    <div class="flex-content-1">
+                                        <a permissionclass="refund" href="https://n.loulilouwai.net/lllw/fee_order/refundpage.html" class="permissionclass">退款</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex-title">报表统计</div>
+                            <div class="flex-contentd">
+                                <div class="flex-content">
+                                    <div class="flex-content-1">
+                                        <a href="https://n.loulilouwai.net/lllw/index/data.html">报表统计</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex-title">其他功能区</div>
+                            <div class="flex-contentd last">
+                                <div class="flex-content">
+                                    <div class="flex-content-1">
+                                        <a permissionclass="send_sms_group" href="https://n.loulilouwai.net/lllw/send_sms_group/index.html" class="permissionclass">短信群发</a>
+                                    </div>
+                                    <div class="flex-content-1">
+                                        <!--<a href="/lllw/repair/index.html">报修管理</a>-->
+                                        <a href="https://n.loulilouwai.net/lllw/house_owner/index/sign/6.html">报修管理</a>
+                                    </div>
+                                </div>
+                                <div class="flex-content">
+                                    <div class="flex-content-1">
+                                        <a href="https://n.loulilouwai.net/lllw/bill_template/index.html">缴费票据模板</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="data-table-wrapper data-expand-table">
+                        <table class="lou-table">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">初始化设置</th>
+                                    <th><a href="">缴费</a></th>
+                                    <th><a href="">报表统计</a></th>
+                                    <th><a href="">其他功能区</a></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="tube"><a permissionclass="view_household" href="/lllw/house_owner/index.html" class="permissionclass">管理住户</a></td>
+                                    <td><a permissionclass="view_custom" href="/lllw/fee_custom/index.html" class="permissionclass">收费项定义</a></td>
+                                    <td><a permissionclass="maintain_household" href="/lllw/import_fee/index.html" class="permissionclass">导入历史缴费数据</a></td>
+                                    <td><a permissionclass="order_count" href="/lllw/order_count/index.html" class="permissionclass">缴费</a></td>
+                                    <td><a href="/lllw/index/data.html">报表统计</a></td>
+                                    <td><a permissionclass="send_sms_group" href="/lllw/send_sms_group/index.html" class="permissionclass">短信群发</a></td> 
+                                </tr>
+                                <tr>
+                                    <td><a permissionclass="maintain_household" href="/lllw/import_owner/index.html" class="permissionclass">导入住户</a></td>
+                                    <td><a permissionclass="view_custom" href="/lllw/fee_custom/index.html" class="permissionclass">收费项选用</a></td>
+                                    <td><a permissionclass="view_household" href="/lllw/house_owner/index/sign/4.html" class="permissionclass">抄水电表记录</a></td>
+                                    <td><a permissionclass="refund" href="#" class="permissionclass">退款</a></td>
+                                    <td></td>
+                                    <td><a href="#">缴费票据模板</a></td> 
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> -->
+                </div>
+            </div>
+            <div style="height:8px;"></div>
+            <div class="lou-backstage-bottom">
+                <div class="flex2 charge-price-records lou-white-bg">
+                    <div class="louli-layout">
+                        <div>
+                            <p class="headline">楼里楼外</p>
+                            <p class="subheading">楼里楼外智慧社区 智能化管理 助力物业管理</p>
+                        </div>
+                        <div class="img">
+                            <img src="./楼里楼外_files/louli-louwai.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex1 charge-price-records lou-white-bg">
+                    <img width="72" height="72" src="./楼里楼外_files/gongzhonghao.png">
+                    <p class="public-green">楼里楼外公众号</p>
+                    <p class="public-small">线上缴费 生活商城</p>
+                </div>
+                <div class="flex1 charge-price-records lou-white-bg">
+                    <img width="72" height="72" src="./楼里楼外_files/kefu.png">
+                    <p class="public-yellow">客服微信号</p>
+                    <p class="public-small">线上缴费 生活商城</p>
+                </div>
+            </div>
+            <!-- <div class="lou-backstage-copyright">2019 吉林省楼里楼外信息技术有限公司</div> -->
+        </div>
+    </div>
+
+    
+    <script>
+        // 头像下拉框
+        $('.lou-person-info').on('click', function (e) {
+            e.stopPropagation();
+            $('.lou-person-control').show();
+        });
+        
+        // 导航二级显示隐藏
+        $('.lou-nav-level1').on('mouseenter', function (e) {
+            $(this).find('aside').show();
+        });
+        $('.lou-nav-level1').on('mouseleave', function (e) {
+            $(this).find('aside').hide();
+        });
+        
+        //分页
+        $(function () {
+            page("","","","");
+        });
+
+    </script>
+    
+    <script>
+        //点击空白地方收起菜单
+        $(document).on('click', function () {
+            $('.lou-person-control').hide();
+        });
+        
+    </script>
+
+
+
+</div></body></html>
